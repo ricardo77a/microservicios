@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Producto;
+use App\Http\Requests\ProductosRequest;
 
 class ProductosController extends Controller
 {
@@ -20,7 +21,7 @@ class ProductosController extends Controller
         return view('productos.create', compact('producto'));
     }
 
-    public function store(Request $request)
+    public function store(ProductosRequest $request)
     {
         $producto = new Producto($request->all());
         $producto->save();
@@ -42,12 +43,6 @@ class ProductosController extends Controller
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         //

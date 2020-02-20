@@ -24,10 +24,26 @@
 							<label>Producto</label>
 							<input type="text" class="form-control" placeholder="Escribe el nombre del producto" name="nombre" value="{{ $producto->nombre }}">
 						</div>
+						@error('nombre')
+						<div class="alert alert-dark alert-dismissible fade show" role="alert">
+							{{ $message }}
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						@enderror
 						<div class="form-group col-md-12">
 							<label>Descripción</label>
 							<textarea name="descripcion" class="form-control" placeholder="Escribe la descripción del producto"> {{ $producto->descripcion }} </textarea>
 						</div>
+						@error('descripcion')
+						<div class="alert alert-dark alert-dismissible fade show" role="alert">
+							{{ $message }}
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						@enderror
 					</div>
 					<!-- Button trigger modal -->
 					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
