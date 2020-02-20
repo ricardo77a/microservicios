@@ -22,11 +22,11 @@
 					<div class="form-row">
 						<div class="form-group col-md-12">
 							<label>Producto</label>
-							<input type="text" class="form-control" placeholder="Escribe el nombre del producto" name="nombre" value="{{ isset($producto->nombre) }}">
+							<input type="text" class="form-control" placeholder="Escribe el nombre del producto" name="nombre" value="{{ $producto->nombre }}">
 						</div>
 						<div class="form-group col-md-12">
 							<label>Descripción</label>
-							<textarea name="descripcion" class="form-control" placeholder="Escribe la descripción del producto"> {{ isset($producto->descripcion) }} </textarea>
+							<textarea name="descripcion" class="form-control" placeholder="Escribe la descripción del producto"> {{ $producto->descripcion }} </textarea>
 						</div>
 					</div>
 					<!-- Button trigger modal -->
