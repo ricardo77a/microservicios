@@ -22,7 +22,7 @@
 					<div class="form-row">
 						<div class="form-group col-md-12">
 							<label>Producto</label>
-							<input type="text" class="form-control" placeholder="Escribe el nombre del producto" name="nombre" value="{{ $producto->nombre }}">
+							<input type="text" class="form-control" placeholder="Escribe el nombre del producto" name="nombre">
 						</div>
 						@error('nombre')
 						<div class="alert alert-dark alert-dismissible fade show" role="alert">
@@ -34,7 +34,7 @@
 						@enderror
 						<div class="form-group col-md-12">
 							<label>Descripción</label>
-							<textarea name="descripcion" class="form-control" placeholder="Escribe la descripción del producto"> {{ $producto->descripcion }} </textarea>
+							<textarea name="descripcion" class="form-control" placeholder="Escribe la descripción del producto"></textarea>
 						</div>
 						@error('descripcion')
 						<div class="alert alert-dark alert-dismissible fade show" role="alert">
