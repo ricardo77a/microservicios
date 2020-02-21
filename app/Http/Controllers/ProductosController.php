@@ -21,7 +21,7 @@ class ProductosController extends Controller
         return view('productos.create', compact('producto'));
     }
 
-    public function store(ProductosRequest $request)
+    public function store(Request $request)
     {
         $producto = new Producto($request->all());
         $producto->save();
