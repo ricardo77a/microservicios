@@ -17,8 +17,8 @@ class ProductosController extends Controller
 
     public function create()
     {
-        $producto = Producto::get()->last();
-        return view('productos.create', compact('producto'));
+        //$producto = Producto::get()->last();
+        return view('productos.create');
     }
 
     public function store(Request $request)
